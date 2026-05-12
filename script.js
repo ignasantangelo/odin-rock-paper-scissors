@@ -22,8 +22,6 @@ function playGame() {
         case 'rock':
             switch (computerChoice) {
                 case 'rock':
-                    humanScore++;
-                    computerScore++;
                     console.log("It's a tie!");
                     break;
                 case 'paper':
@@ -43,8 +41,6 @@ function playGame() {
                     console.log("You win! Paper beats Rock");
                     break;
                 case 'paper':
-                    computerScore++;
-                    humanScore++;
                     console.log("It's a tie!");
                     break;
                 case 'scissors':
@@ -64,8 +60,6 @@ function playGame() {
                     console.log("You win! Scissors beats Paper");
                     break;
                 case 'scissors':
-                    computerScore++;
-                    humanScore++;
                     console.log("It's a tie!");
                     break;
             }
