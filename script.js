@@ -8,3 +8,7 @@ function getComputerChoice() {
             return 'Scissors';
     }
 }
+
+function getHumanChoice() {
+    return prompt('Your turn: ');
+}
