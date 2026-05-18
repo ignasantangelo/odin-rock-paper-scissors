@@ -80,3 +80,9 @@ button:active {
 p#who-won {
     font-weight: 700;
 }
+
+#final-winner {
+    font-size: xx-large;
+    font-weight: 700;
+    margin: 0;
+}

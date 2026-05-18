@@ -76,6 +76,22 @@ function playRound(humanChoice, computerChoice) {
         hScore.textContent = `You: ${humanScore}`
         const cScore = document.getElementById("computer-score");
         cScore.textContent = `Computer: ${computerScore}`
+
+    const finalWinner = document.getElementById("final-winner");
+
+    if (roundNumber == 5) {
+        if (humanScore > computerScore) {
+            finalWinner.textContent = "You win!";
+        }
+        else if (humanScore < computerScore) {
+            finalWinner.textContent = "The computer wins!";
+        }
+        else {
+            finalWinner.textContent = "It's a tie!"
+        }
+    buttons.forEach(button => button.disabled = true);
+    }
+
 }
 
 const buttons = document.querySelectorAll('button');
