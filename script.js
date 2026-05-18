@@ -13,13 +13,16 @@ let humanScore = 0;
 let computerScore = 0;
 let roundNumber = 0;
 
+const choose = document.getElementById("choose");
+const whoWon = document.getElementById("who-won");
+const round = document.getElementById("round-number");
+const hScore = document.getElementById("human-score");
+const cScore = document.getElementById("computer-score");
+
 function playRound(humanChoice, computerChoice) {
-    const choose = document.getElementById("choose");
     choose.textContent = `You chose ${humanChoice.charAt(0).toUpperCase() +  
         humanChoice.slice(1)}, the computer chose 
         ${computerChoice.charAt(0).toUpperCase() +  computerChoice.slice(1)}`
-
-    const whoWon = document.getElementById("who-won");
 
     switch (humanChoice) {
         case 'rock':
@@ -69,12 +72,9 @@ function playRound(humanChoice, computerChoice) {
             break;
         }
 
-        const round = document.getElementById("round-number");
         round.textContent = `Round #${++roundNumber}`
 
-        const hScore = document.getElementById("human-score");
         hScore.textContent = `You: ${humanScore}`
-        const cScore = document.getElementById("computer-score");
         cScore.textContent = `Computer: ${computerScore}`
 
     const finalWinner = document.getElementById("final-winner");
