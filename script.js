@@ -9,16 +9,11 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    return prompt('Your turn: ');
-}
-
 let humanScore = 0;
 let computerScore = 0;
 
-function playGame() {
-    function playRound(humanChoice, computerChoice) {
-    switch (humanChoice.toLowerCase()) {
+function playRound(humanChoice, computerChoice) {
+    switch (humanChoice) {
         case 'rock':
             switch (computerChoice) {
                 case 'rock':
@@ -65,19 +60,14 @@ function playGame() {
             }
             break;
         }
-    }
-
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
-
-    if (humanScore > computerScore) {
-        return 'The human wins!';
-    } else if (computerScore > humanScore) {
-        return 'The computer wins';
-    } else {
-        return "It's a tie!";
-    }
 }
+
+const buttons = document.querySelectorAll('button');
+
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            const humanChoice = button.id;
+            const computerChoice = getComputerChoice();
+            playRound(humanChoice, computerChoice);
+        })
+    })
