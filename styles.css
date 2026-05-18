@@ -1,0 +1,82 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+    padding: 0 2rem;
+}
+
+main {
+    flex: 1;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+footer {
+    padding: 0 2rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: small;
+}
+
+button {
+    background-color: white;
+    border: solid black 2px;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+}
+
+button:active {
+    background-color: whitesmoke;
+    transform: translateY(1px);
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#game-data {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+#selection {
+    font-weight: 600;
+    font-size: large;
+    margin-top: 1.5rem;
+}
+
+#results {
+    margin-top: 1.5rem;
+}
+
+#score p {
+    margin: 0.1em 0;
+}
+
+#scores {
+    display: flex;
+    gap: 3rem;
+}
+
+#scores p, #results p {
+    font-weight: normal;
+}
+
+p#who-won {
+    font-weight: 700;
+}

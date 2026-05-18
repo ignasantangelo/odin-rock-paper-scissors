@@ -4,8 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+    </header>
+    <main>
+        <hgroup>
+            <h2>Play a game!</h2>
+            <p>The one with the most points after 5 rounds wins.</p>
+        </hgroup>
+        <div id="game">
+            <div id="game-data">
+                <p>Round #</p>
+                <div id="score">
+                    <p>Score:</p>
+                    <div id="scores">
+                        <p>You: </p>
+                        <p>Computer: </p>
+                    </div>
+                </div>
+            </div>
+            <div id="selection">
+                <p>What do you choose?</p>
+                <div id="buttons">
+                    <button>Rock</button>
+                    <button>Paper</button>
+                    <button>Scissors</button>
+                </div>
+            </div>
+            <div id="results">
+                <p>You chose [test], the computer chose [test]</p>
+                <p id="who-won">[test] wins!</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>By Ignacio Santangelo</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
