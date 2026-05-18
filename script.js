@@ -11,6 +11,7 @@ function getComputerChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+let roundNumber = 0;
 
 function playRound(humanChoice, computerChoice) {
     const choose = document.getElementById("choose");
@@ -67,6 +68,9 @@ function playRound(humanChoice, computerChoice) {
             }
             break;
         }
+
+        const round = document.getElementById("round-number");
+        round.textContent = `Round #${++roundNumber}`
 }
 
 const buttons = document.querySelectorAll('button');
