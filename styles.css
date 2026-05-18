@@ -4,7 +4,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 header {
@@ -31,7 +30,7 @@ footer {
 
 button {
     background-color: white;
-    border: solid black 2px;
+    border: 2px solid black;
     padding: 0.5rem 2rem;
     border-radius: 4px;
 }
@@ -45,7 +44,7 @@ button:active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
 #game-data {
