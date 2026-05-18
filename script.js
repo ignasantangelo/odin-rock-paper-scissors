@@ -13,19 +13,26 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
+    const choose = document.getElementById("choose");
+    choose.textContent = `You chose ${humanChoice.charAt(0).toUpperCase() +  
+        humanChoice.slice(1)}, the computer chose 
+        ${computerChoice.charAt(0).toUpperCase() +  computerChoice.slice(1)}`
+
+    const whoWon = document.getElementById("who-won");
+
     switch (humanChoice) {
         case 'rock':
             switch (computerChoice) {
                 case 'rock':
-                    console.log("It's a tie!");
+                    whoWon.textContent = "It's a tie!";
                     break;
                 case 'paper':
                     computerScore++;
-                    console.log("You lose! Paper beats Rock");
+                    whoWon.textContent = "You lose! Paper beats Rock";
                     break;
                 case 'scissors':
                     humanScore++;
-                    console.log("You win! Rock beats Scissors");
+                    whoWon.textContent = "You win! Rock beats Scissors";
                     break;
             }
             break;
@@ -33,14 +40,14 @@ function playRound(humanChoice, computerChoice) {
             switch (computerChoice) {
                 case 'rock':
                     humanScore++;
-                    console.log("You win! Paper beats Rock");
+                    whoWon.textContent = "You win! Paper beats Rock";
                     break;
                 case 'paper':
-                    console.log("It's a tie!");
+                    whoWon.textContent = "It's a tie!";
                     break;
                 case 'scissors':
                     computerScore++;
-                    console.log("You lose! Scissors beats Paper");
+                    whoWon.textContent = "You lose! Scissors beats Paper";
                     break;
             }
             break;
@@ -48,14 +55,14 @@ function playRound(humanChoice, computerChoice) {
             switch (computerChoice) {
                 case 'rock':
                     computerScore++;
-                    console.log("You lose! Rock beats Scissors");
+                    whoWon.textContent = "You lose! Rock beats Scissors";
                     break;
                 case 'paper':
                     humanScore++;
-                    console.log("You win! Scissors beats Paper");
+                    whoWon.textContent = "You win! Scissors beats Paper";
                     break;
                 case 'scissors':
-                    console.log("It's a tie!");
+                    whoWon.textContent = "It's a tie!";
                     break;
             }
             break;
